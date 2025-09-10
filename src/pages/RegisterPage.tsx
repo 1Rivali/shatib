@@ -100,7 +100,7 @@ const RegisterPage = () => {
       };
 
       const res = await fetch(
-        "http://www.ouzon.somee.com/api/Accounts/Register",
+        "https://www.ouzon.somee.com/api/Accounts/Register",
         requestOptions
       );
       if (res.ok) {
@@ -184,30 +184,33 @@ const RegisterPage = () => {
                 onChange={handleInputChange}
               />
               <div
-                className={`w-full h-2 mt-2 bg-gray-300 rounded ${formData.password ? "block" : "hidden"
-                  }`}
+                className={`w-full h-2 mt-2 bg-gray-300 rounded ${
+                  formData.password ? "block" : "hidden"
+                }`}
               >
                 <div
                   style={{ width: `${passwordStrength}%` }}
-                  className={`h-full rounded ${passwordStrength < 40
+                  className={`h-full rounded ${
+                    passwordStrength < 40
                       ? "bg-red-500"
                       : passwordStrength < 80
-                        ? "bg-yellow-500"
-                        : "bg-green-500"
-                    }`}
+                      ? "bg-yellow-500"
+                      : "bg-green-500"
+                  }`}
                 ></div>
               </div>
               <div
-                className={`text-sm mt-2 ${formData.password ? "block" : "hidden"
-                  }`}
+                className={`text-sm mt-2 ${
+                  formData.password ? "block" : "hidden"
+                }`}
               >
                 <span className="font-semibold">قوة كلمة المرور: </span>
                 <span>
                   {passwordStrength < 40
                     ? "ضعيفة - حاول إضافة المزيد من الأحرف والرموز."
                     : passwordStrength < 80
-                      ? "متوسطة - أضف أرقامًا أو رموزًا لتحسين القوة."
-                      : "كلمة مرور قوية!"}
+                    ? "متوسطة - أضف أرقامًا أو رموزًا لتحسين القوة."
+                    : "كلمة مرور قوية!"}
                 </span>
               </div>
               <div
@@ -231,8 +234,9 @@ const RegisterPage = () => {
                 i
               </div>
               <div
-                className={`absolute right-16 top-9 bg-gray-100 rounded p-2 ${isShownPasswordTooltip ? "" : "hidden"
-                  }`}
+                className={`absolute right-16 top-9 bg-gray-100 rounded p-2 ${
+                  isShownPasswordTooltip ? "" : "hidden"
+                }`}
               >
                 <p className="text-sm text-gray-600">
                   استخدم 8 أحرف على الأقل، مع الأحرف الكبيرة والصغيرة والأرقام

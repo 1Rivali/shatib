@@ -9,7 +9,7 @@ export async function refreshToken() {
   }
 
   try {
-    const apiUrl = "http://www.ouzon.somee.com/api/";
+    const apiUrl = "https://www.ouzon.somee.com/api/";
     const response = await fetch(`${apiUrl}Accounts/RefreshToken`, {
       method: "POST",
       headers: {
@@ -62,7 +62,7 @@ export function useApi<T>(
         setIsLoading(true);
         try {
           // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-          const apiUrl = "http://www.ouzon.somee.com/api/";
+          const apiUrl = "https://www.ouzon.somee.com/api/";
           let token;
           let requestOptions;
           if (isToken) {
@@ -117,7 +117,7 @@ export function useApi<T>(
     setIsLoading(true);
     try {
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       console.log(`${apiUrl}${endpoint}`);
       let headers = {};
       if (token) {
@@ -167,7 +167,7 @@ export function useApi<T>(
     setIsLoading(true);
     try {
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       let headers = {};
       if (isToken) {
         const token = localStorage.getItem("accessToken");
@@ -205,7 +205,7 @@ export function useApi<T>(
 
   async function patchForm(body: FormData) {
     setIsLoading(true);
-    const apiUrl = "http://www.ouzon.somee.com/api/";
+    const apiUrl = "https://www.ouzon.somee.com/api/";
     try {
       console.log(`${apiUrl}${endpoint}`);
       let headers = {};
@@ -250,7 +250,7 @@ export function useApi<T>(
     setIsLoading(true);
     try {
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       console.log(`${apiUrl}${endpoint}`);
       let headers = {};
 

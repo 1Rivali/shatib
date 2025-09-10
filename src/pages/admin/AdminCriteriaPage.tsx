@@ -55,13 +55,16 @@ const AdminCriteriaPage = () => {
     formData.append("Image", invoiceImage);
 
     try {
-      const response = await fetch(`http://www.ouzon.somee.com/api/CriteriaBills`, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
+      const response = await fetch(
+        `https://www.ouzon.somee.com/api/CriteriaBills`,
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to upload invoice");
@@ -90,22 +93,23 @@ const AdminCriteriaPage = () => {
                 <div className="relative">
                   {/* Dropdown Button */}
                   <div
-                    className={`flex gap-4 rounded-full py-1 px-4 cursor-pointer ${status === "Pending"
+                    className={`flex gap-4 rounded-full py-1 px-4 cursor-pointer ${
+                      status === "Pending"
                         ? "bg-yellow-100"
                         : status === "Rejected"
-                          ? "bg-red-100"
-                          : status === "Accepted"
-                            ? "bg-green-100"
-                            : ""
-                      }`}
+                        ? "bg-red-100"
+                        : status === "Accepted"
+                        ? "bg-green-100"
+                        : ""
+                    }`}
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   >
                     <span>
                       {status === "Pending"
                         ? "قيد المعالجة"
                         : status === "Rejected"
-                          ? "مرفوضة"
-                          : "مقبولة"}
+                        ? "مرفوضة"
+                        : "مقبولة"}
                     </span>
                     <img className="w-3" src={downArrowIcon} alt="dropdown" />
                   </div>
@@ -124,8 +128,8 @@ const AdminCriteriaPage = () => {
                               {statusOption === "Pending"
                                 ? "قيد المعالجة"
                                 : statusOption === "Rejected"
-                                  ? "مرفوضة"
-                                  : "مقبولة"}
+                                ? "مرفوضة"
+                                : "مقبولة"}
                             </li>
                           )
                         )}

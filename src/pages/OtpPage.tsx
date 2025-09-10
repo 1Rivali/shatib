@@ -18,7 +18,10 @@ const OtpPage = () => {
         body: JSON.stringify({ destinationPhoneNumber: phoneNumber }),
       };
 
-      await fetch("http://www.ouzon.somee.com/api/Accounts/OTP/sms", requestOptions);
+      await fetch(
+        "https://www.ouzon.somee.com/api/Accounts/OTP/sms",
+        requestOptions
+      );
     } catch (error) {
       console.log("OTP Error:", error);
     }
@@ -78,7 +81,7 @@ const OtpPage = () => {
             </div>
 
             <div className="w-64 self-center">
-              <ButtonGold onClick={() => { }}>تأكيد</ButtonGold>
+              <ButtonGold onClick={() => {}}>تأكيد</ButtonGold>
             </div>
 
             <span className="mt-6">

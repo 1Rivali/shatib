@@ -12,7 +12,7 @@ export function usePostComment<T>(endpoint: string) {
     setIsLoading(true);
     try {
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       const token = localStorage.getItem("accessToken");
       const requestOptions = {
         method: "POST",

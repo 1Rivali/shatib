@@ -19,7 +19,7 @@ export function usePostForm<T>(
       setIsLoading(true);
       try {
         // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-        const apiUrl = "http://www.ouzon.somee.com/api/";
+        const apiUrl = "https://www.ouzon.somee.com/api/";
         console.log(`${apiUrl}${endpoint}`);
         const response = await fetch(`${apiUrl}${endpoint}`);
 
@@ -51,7 +51,7 @@ export function usePostForm<T>(
     setIsLoading(true);
     try {
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       console.log(localStorage.getItem("accessToken"));
       const requestOptions = {
         method: "POST",

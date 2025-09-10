@@ -1,2 +1,2 @@
-export const API_URL = "http://www.ouzon.somee.com/api/";
-export const STORAGE_URL = "http://www.ouzon.somee.com/";
+export const API_URL = "https://www.ouzon.somee.com/api/";
+export const STORAGE_URL = "https://www.ouzon.somee.com/";

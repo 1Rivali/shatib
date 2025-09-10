@@ -11,7 +11,7 @@ export function usePostCriteria<T>(endpoint: string) {
     try {
       const token = localStorage.getItem("accessToken");
       // const apiUrl = `${import.meta.env.VITE_API_URL}`;
-      const apiUrl = "http://www.ouzon.somee.com/api/";
+      const apiUrl = "https://www.ouzon.somee.com/api/";
       const requestOptions = {
         method: "POST",
         headers: {
