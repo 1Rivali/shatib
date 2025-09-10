@@ -5,10 +5,38 @@ import {
   useApi,
   useParams,
   SectionTitles,
+  docIcon,
+  purpleParagraphIcon,
 } from "..";
 
 import { Product } from "../models/Product";
 import { useState } from "react";
+
+const ColoredIcon = ({
+  src,
+  alt,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) => (
+  <span
+    role="img"
+    aria-label={alt}
+    className={`inline-block bg-primary ${className}`}
+    style={{
+      WebkitMaskImage: `url(${src})`,
+      maskImage: `url(${src})`,
+      WebkitMaskRepeat: "no-repeat",
+      maskRepeat: "no-repeat",
+      WebkitMaskPosition: "center",
+      maskPosition: "center",
+      WebkitMaskSize: "contain",
+      maskSize: "contain",
+    }}
+  />
+);
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -85,7 +113,8 @@ const ProductPage = () => {
               aria-expanded={isVerificationOpen}
               className="w-full flex items-center justify-between text-right px-6 py-4"
             >
-              <span className="text-2xl font-bold max-lg:text-xl">
+              <span className="text-2xl font-bold max-lg:text-xl flex items-center gap-2">
+                <ColoredIcon src={docIcon} alt="سياسة" className="w-6 h-6" />
                 سياسة الاسترجاع و الاستبدال
               </span>
               <span
@@ -112,7 +141,14 @@ const ProductPage = () => {
               aria-expanded={isDescriptionOpen}
               className="w-full flex items-center justify-between text-right px-6 py-4"
             >
-              <span className="text-2xl font-bold max-lg:text-xl">الوصف</span>
+              <span className="text-2xl font-bold max-lg:text-xl flex items-center gap-2">
+                <ColoredIcon
+                  src={purpleParagraphIcon}
+                  alt="الوصف"
+                  className="w-6 h-6"
+                />
+                الوصف
+              </span>
               <span
                 className={`transition-transform ${
                   isDescriptionOpen ? "rotate-180" : "rotate-0"
