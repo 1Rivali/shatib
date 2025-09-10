@@ -50,7 +50,7 @@ const CategoriesButtonListHorizontal = ({
       {/* Scrollable Button List */}
       <div
         ref={scrollContainerRef}
-        className="overflow-x-auto whitespace-nowrap no-scrollbar"
+        className="overflow-x-auto whitespace-nowrap no-scrollbar snap-x snap-mandatory scroll-px-3"
       >
         {/* All Categories as circular avatar with icon */}
         <button
@@ -59,10 +59,10 @@ const CategoriesButtonListHorizontal = ({
             setSelectedCategory(0);
             setLocalCategory(0);
           }}
-          className="inline-block align-top px-3 pt-3 pb-2 group"
+          className="inline-block align-top px-3 pt-3 pb-2 group snap-start"
         >
           <div
-            className={`mx-auto w-15 h-15 sm:w-[90px] sm:h-[90px] rounded-full overflow-hidden ring-2 transition-all duration-200 ${
+            className={`mx-auto w-[72px] h-[72px] sm:w-[90px] sm:h-[90px] rounded-full overflow-hidden ring-2 transition-all duration-200 ${
               localCategory === 0
                 ? "ring-primary"
                 : "ring-transparent group-hover:ring-gray-300"
@@ -98,10 +98,10 @@ const CategoriesButtonListHorizontal = ({
                   setSelectedCategory(cat.id);
                   setLocalCategory(cat.id);
                 }}
-                className="inline-block align-top px-3 pt-3 pb-2 group"
+                className="inline-block align-top px-3 pt-3 pb-2 group snap-start"
               >
                 <div
-                  className={`mx-auto w-15 h-15 sm:w-[90px] sm:h-[90px] rounded-full overflow-hidden ring-2 transition-all duration-200 ${
+                  className={`mx-auto w-[72px] h-[72px] sm:w-[90px] sm:h-[90px] rounded-full overflow-hidden ring-2 transition-all duration-200 ${
                     isActive
                       ? "ring-primary"
                       : "ring-transparent group-hover:ring-gray-300"

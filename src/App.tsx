@@ -21,7 +21,7 @@ const App = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <main>
+    <main className="bg-slate-50 min-h-screen">
       <ToastContainer rtl={true} />
 
       <Suspense fallback={<div>Loading...</div>}>

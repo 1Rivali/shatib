@@ -78,7 +78,7 @@ const NavBar = () => {
         )}
         <nav className="flex items-center justify-around border-b py-4 px-8">
           <Link to={"/home"}>
-            <img src={shattibLogoRow} alt="" />
+            <img src={shattibLogoRow} alt="" className="w-[80px] h-[80px]" />
           </Link>
           <Link to={"/home"}>
             <span>{t("homePageTxt")}</span>
@@ -162,7 +162,7 @@ const NavBar = () => {
         <nav className="flex flex-col justify-between border-b items-start p-8 gap-8">
           <div className="flex justify-between w-full">
             <Link to={"/home"}>
-              <img src={shattibLogoRow} alt="" />
+              <img src={shattibLogoRow} alt="" className="w-24 h-24" />
             </Link>
             <button onClick={() => setIsCollapsed(!isCollapsed)}>
               <img src={menuIcon} alt="" />

@@ -25,7 +25,7 @@ export { default as searchIcon } from "./assets/svg/icon-search.svg";
 export { default as cartIcon } from "./assets/svg/icon-cart.svg";
 export { default as heartIcon } from "./assets/svg/icon-heart.svg";
 export { default as accountIcon } from "./assets/svg/icon-account.svg";
-export { default as shattibGoldIcon } from "./assets/svg/icon-shattib-gold.png";
+export { default as shattibGoldIcon } from "./assets/svg/batngi-icon.png";
 export { default as earthIcon } from "./assets/svg/icon-earth.svg";
 export { default as emailIcon } from "./assets/svg/icon-email.svg";
 export { default as lockIcon } from "./assets/svg/icon-lock.svg";
@@ -113,8 +113,8 @@ export { default as gpsIcon } from "./assets/svg/icon-gps.svg";
 // -- logos --
 //
 //
-export { default as shattibLogoCol } from "./assets/svg/shattib-logo-col.svg";
-export { default as shattibLogoRow } from "./assets/svg/shattib-logo-row.svg";
+export { default as shattibLogoCol } from "./assets/svg/batngi-logo.png";
+export { default as shattibLogoRow } from "./assets/svg/batngi-logo.png";
 // -- Companies Banner --
 export { default as cluLogo } from "./assets/svg/logo-clu.svg";
 export { default as dewareLogo } from "./assets/svg/logo-deware.svg";

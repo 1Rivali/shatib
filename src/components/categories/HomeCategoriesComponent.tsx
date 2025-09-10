@@ -26,12 +26,12 @@ const HomeCategoriesComponent = ({
         </h2> */}
 
         {/* Sub-categories using the old card style */}
-        <div className="grid gap-y-2 gap-x-0.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+        <div className="flex gap-4 overflow-x-auto no-scrollbar sm:grid sm:gap-y-2 sm:gap-x-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
           {subCategories.map((sc) => (
             <Link
               key={sc.id}
               to={`/category/${categoryId}/${sc.id}`}
-              className="block"
+              className="block shrink-0"
               title={sc.name}
             >
               <CategoryCard img={`${STORAGE_URL}${sc.imagePath}`} num="">

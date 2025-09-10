@@ -171,7 +171,7 @@ const ProductDetailsCard = ({ data }: Props) => {
               <h1 className="text-2xl font-bold text-gray-800">{data.name}</h1>
               <h2 className="text-lg text-gray-600">{data.brand}</h2>
             </div>
-            <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border border-yellow-200">
+            <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl border border-primary">
               <AccentText>
                 {price +
                   (selectedColor?.price || 0) +

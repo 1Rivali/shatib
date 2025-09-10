@@ -4,9 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#c18a33",
-        secondary: "#151f2d",
-        brown: "#E0C9A4",
+        // Blueish brand palette
+        primary: "#2563eb", // blue-600
+        secondary: "#0f172a", // slate-900
+        brown: "#DBEAFE", // blue-100 accent
       },
       fontSize: {
         heading01: "2.25rem",

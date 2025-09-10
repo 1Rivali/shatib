@@ -8,7 +8,7 @@ import {
   Link,
   MainSlideShow,
   shattibGoldIcon,
-  shattibText,
+  // shattibText,
   TitleNumber,
   useApi,
   useState,
@@ -45,8 +45,11 @@ const HomePage = () => {
           <div className="relative h-full pb-32 overflow-hidden">
             <MainSlideShow />
 
-            <div className="absolute top-0 pt-16 ps-32 flex flex-col gap-8 z-20 max-lg:pt-8 max-lg:ps-8">
-              <img className="w-64 max-lg:w-48" src={shattibText} />
+            <div className="absolute top-10 pt-16 ps-32 flex flex-col gap-8 z-20 max-lg:pt-8 max-lg:ps-8">
+              {/* <img className="w-64 max-lg:w-48" src={shattibText} /> */}
+              <h1 className="text-6xl text-primary font-bold max-lg:text-lg">
+                باطنجي
+              </h1>
               <span className="text-3xl text-white font-bold max-lg:text-lg">
                 {t("homePageMainSlideShowDescriptionTxt")}
               </span>
