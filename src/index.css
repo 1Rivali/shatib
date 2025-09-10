@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Yanson Regular";
+  src: url("./assets/fonts/Younestype - Yanson Regular.otf");
+}
+
+:root {
+  font-family: "Yanson Regular", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.sidebar {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Sidebar container with scroll enabled */
+/* .relative.w-4/5 { */
+/* height: 100%; Full height for scrolling */
+/* overflow-y: auto; Enable scrolling inside the sidebar */
+/* } */
